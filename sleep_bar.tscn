@@ -1,15 +1,17 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfq6r6i2kwncj"]
 
-[sub_resource type="GDScript" id="GDScript_ii6pp"]
-script/source = "extends ProgressBar
+[ext_resource type="Script" path="res://sleep_bar.gd" id="1_1lcjs"]
 
+[node name="SleepBar" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1lcjs")
 
-func test(lool):
-	value = lool
-"
-
-[node name="SleepBar" type="ProgressBar"]
+[node name="Bar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-script = SubResource("GDScript_ii6pp")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2

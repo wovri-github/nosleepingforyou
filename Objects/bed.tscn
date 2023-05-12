@@ -40,6 +40,8 @@ mesh = SubResource("BoxMesh_y5nb5")
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[connection signal="area_entered" from="Pillow" to="." method="_on_pillow_area_entered"]
+[connection signal="area_exited" from="Pillow" to="." method="_on_pillow_area_exited"]
 [connection signal="body_entered" from="Pillow" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Pillow" to="." method="_on_area_3d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
