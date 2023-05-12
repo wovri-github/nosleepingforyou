@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bwgl0rwmauhs4"]
+[gd_scene load_steps=13 format=3 uid="uid://bwgl0rwmauhs4"]
 
 [ext_resource type="PackedScene" uid="uid://d24ij6ocm73vt" path="res://player.tscn" id="1_7o74r"]
 [ext_resource type="PackedScene" uid="uid://csv75rgonsl2i" path="res://Objects/floor_part.tscn" id="1_jt4de"]
 [ext_resource type="PackedScene" uid="uid://cntax283353xi" path="res://Objects/bed.tscn" id="2_6mrob"]
-[ext_resource type="Script" path="res://Guy777.gd" id="4_pw1bg"]
 [ext_resource type="PackedScene" uid="uid://dpwfttkot6xoo" path="res://Objects/victim.tscn" id="5_vx32k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7sc84"]
@@ -33,14 +32,6 @@ size = Vector2(10, 10)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xbm1h"]
 data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jipiu"]
-albedo_color = Color(1, 0.25098, 0.25098, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_a4pgv"]
-material = SubResource("StandardMaterial3D_jipiu")
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1c6vv"]
 
 [node name="Main" type="Node3D"]
 
@@ -96,20 +87,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 5)
 [node name="Bed4" parent="NavigationRegion3D/Beds" instance=ExtResource("2_6mrob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 25)
 
-[node name="Guy777" type="CharacterBody3D" parent="." groups=["Victims"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.95042, 0.0455449, 0)
-script = ExtResource("4_pw1bg")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Guy777"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_a4pgv")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Guy777"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_1c6vv")
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Guy777"]
-target_desired_distance = 2.0
-
-[node name="Victim" parent="." instance=ExtResource("5_vx32k")]
+[node name="Ziom" parent="." instance=ExtResource("5_vx32k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.598, 0, -5)
+
+[node name="Grzegorz" parent="." instance=ExtResource("5_vx32k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.45352, 0, 0)

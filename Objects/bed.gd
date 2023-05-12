@@ -29,7 +29,7 @@ func _on_area_3d_body_entered(body):
 		$Timer.start(SLEEP_NEEDED)
 		sleeping_vicim_name.emit(body.name)
 		victim = body
-		remove_from_group("Unoccupied_beds")
+		
 
 func _on_area_3d_body_exited(body):
 	if body.is_in_group("Player"):
