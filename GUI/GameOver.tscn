@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://byhhyp0ixqgxh"]
+
+[ext_resource type="Script" path="res://GUI/GameOver.gd" id="1_pmmx7"]
+[ext_resource type="Theme" uid="uid://cm0ayacm4lssn" path="res://GUI/GUI.tres" id="2_b1pet"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pmmx7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -193.0
+offset_right = 168.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Game over"
+
+[node name="GoMenu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -26.5
+offset_right = 138.0
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_b1pet")
+text = "Go to main menu"
+
+[connection signal="pressed" from="GoMenu" to="." method="_on_go_menu_pressed"]
