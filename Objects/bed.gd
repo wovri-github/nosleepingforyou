@@ -38,5 +38,5 @@ func _process(delta):
 		sleep_timer.emit(100*$Timer.time_left/SLEEP_NEEDED)
 
 func _on_timer_timeout():
-	print("game over")
+	add_child(preload("res://GUI/GameOver.tscn").instantiate())
 
