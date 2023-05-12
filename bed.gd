@@ -1,7 +1,7 @@
 extends StaticBody3D
 
 const sleep_bar_tscn = preload("res://sleep_bar.tscn")
-const SLEEP_NEEDED = 10
+const SLEEP_NEEDED = 30
 var someone_sleeping = true # true only for testing
 signal sleep_timer(time_left)
 
@@ -24,6 +24,9 @@ func _on_area_3d_body_exited(body):
 		$Timer.start(SLEEP_NEEDED)
 
 func _ready():
+	$MeshInstance3D.mesh.material = $MeshInstance3D.mesh.material.duplicate()
+	reset_color()
+	
 	var bar = sleep_bar_tscn.instantiate()
 	get_tree().root.get_node("Main/Bars").add_child(bar)
 	sleep_timer.connect(bar.set_value)
