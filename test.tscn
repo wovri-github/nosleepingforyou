@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://bwgl0rwmauhs4"]
+[gd_scene load_steps=17 format=3 uid="uid://bwgl0rwmauhs4"]
 
 [ext_resource type="PackedScene" uid="uid://d24ij6ocm73vt" path="res://player.tscn" id="1_7o74r"]
 [ext_resource type="PackedScene" uid="uid://csv75rgonsl2i" path="res://Objects/floor_part.tscn" id="1_jt4de"]
 [ext_resource type="PackedScene" uid="uid://cntax283353xi" path="res://Objects/bed.tscn" id="2_6mrob"]
 [ext_resource type="Script" path="res://Guy777.gd" id="4_pw1bg"]
+[ext_resource type="PackedScene" uid="uid://dpwfttkot6xoo" path="res://Objects/victim.tscn" id="5_vx32k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7sc84"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -16,10 +17,6 @@ sky_material = SubResource("ProceduralSkyMaterial_7sc84")
 background_mode = 2
 sky = SubResource("Sky_w1jm4")
 tonemap_mode = 2
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tllmm"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_y3o4b"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x5axw"]
 vertices = PackedVector3Array(4.5, 0.5, 0, 4.75, 0.5, -1, 4.75, 0.5, -3.75, 4.5, 0.5, -5.75, 5, 0.5, -6, 5, 0.5, -9.5, -2.25, 0.5, -9.5, 4.5, 0.5, 0, 4.75, 0.5, -3.75, 4.5, 0.5, -5.75, -2.25, 0.5, -9.5, -9.5, 0.5, -9.5, -9.5, 0.5, 0, 7.5, 0.5, -1, 7.75, 0.5, 0, 9.5, 0.5, 0, 7.75, 0.5, -4.25, 7.25, 0.5, -3.75, 7.25, 0.5, -3.75, 4.75, 0.5, -3.75, 4.75, 0.5, -1, 7.5, 0.5, -1, 5, 0.5, -9.5, 5, 0.5, -6, 7.5, 0.5, -6, 9.5, 0.5, -9.5, 7.75, 0.5, -4.25, 9.5, 0.5, 0, 9.5, 0.5, -9.5, 7.5, 0.5, -6, -1, 0.5, 11.75, 1, 0.5, 11.75, 1.25, 0.5, 9.5, -1.25, 0.5, 9.5, 4.5, 0.5, 6, 4.75, 0.5, 4, 4.5, 0.5, 0, -9.5, 0.5, 0, -9.5, 0.5, 9.5, -1.25, 0.5, 9.5, 6, 0.5, 9.5, 6.25, 0.5, 6.25, 4.5, 0.5, 6, 1.25, 0.5, 9.5, 4.75, 0.5, 4, 4.75, 0.5, 1.25, 4.5, 0.5, 0, -1.25, 0.5, 9.5, 1.25, 0.5, 9.5, 4.5, 0.5, 6, 9.5, 0.5, 0, 7.75, 0.5, 0, 7.25, 0.5, 1.25, 7.75, 0.5, 4.25, 7.25, 0.5, 1.25, 4.75, 0.5, 1.25, 4.75, 0.5, 4, 7.75, 0.5, 4.25, 7.75, 0.5, 4.25, 7.75, 0.5, 5.75, 9.5, 0.5, 9.5, 9.5, 0.5, 0, 7.75, 0.5, 5.75, 6.25, 0.5, 6.25, 6, 0.5, 9.5, 9.5, 0.5, 9.5, 5.5, 0.5, 24, 5.75, 0.5, 25, 8, 0.5, 25, 8, 0.5, 20.5, -1, 0.5, 25, 2.5, 0.5, 25, 2.75, 0.5, 24, 1, 0.5, 20.25, -1, 0.5, 18.25, 1, 0.5, 11.75, -1, 0.5, 11.75, -1, 0.5, 18.25, 1, 0.5, 20.25, 5.5, 0.5, 24, 8, 0.5, 20.5, 1, 0.5, 20.25, 2.75, 0.5, 24, 8, 0.5, 25, 5.75, 0.5, 25, 5.25, 0.5, 26.25, 8, 0.5, 29.5, 2.75, 0.5, 26.25, 2.5, 0.5, 25, -1, 0.5, 25, -1, 0.5, 29.5, 2.75, 0.5, 26.25, -1, 0.5, 29.5, 8, 0.5, 29.5, 5.25, 0.5, 26.25)
@@ -59,15 +56,6 @@ shadow_enabled = true
 [node name="Bars" type="HBoxContainer" parent="."]
 offset_right = 1152.0
 offset_bottom = 50.0
-
-[node name="Guy123" type="Area3D" parent="." groups=["Victims"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5983, 0.615367, -5)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Guy123"]
-shape = SubResource("CapsuleShape3D_tllmm")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Guy123"]
-mesh = SubResource("CapsuleMesh_y3o4b")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_x5axw")
@@ -122,3 +110,6 @@ shape = SubResource("CapsuleShape3D_1c6vv")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Guy777"]
 target_desired_distance = 2.0
+
+[node name="Victim" parent="." instance=ExtResource("5_vx32k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.598, 0, -5)

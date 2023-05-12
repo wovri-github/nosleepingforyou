@@ -3,6 +3,8 @@ extends StaticBody3D
 const sleep_bar_tscn = preload("res://sleep_bar.tscn")
 const SLEEP_NEEDED = 30
 var someone_sleeping = false
+var victim : CharacterBody3D = null
+
 signal sleep_timer(time_left)
 signal sleeping_vicim_name(text)
 
@@ -12,20 +14,6 @@ func change_color():
 func reset_color():
 	$MeshInstance3D.mesh.material.albedo_color = Color.AQUA
 
-func _on_pillow_area_entered(area):
-	if area.is_in_group("Victims"):
-		someone_sleeping = true
-		$Timer.paused = false
-		sleep_timer.emit(100)
-		$Timer.start(SLEEP_NEEDED)
-		sleeping_vicim_name.emit(area.name)
-
-func _on_pillow_area_exited(area):
-	if area.is_in_group("Victims"):
-		someone_sleeping = false
-		sleep_timer.emit(0)
-		$Timer.paused = true
-		sleeping_vicim_name.emit("")
 
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("Player"):
@@ -33,7 +21,15 @@ func _on_area_3d_body_entered(body):
 		if someone_sleeping:
 			$Timer.paused = true
 			sleep_timer.emit(100)
-		return
+			victim.position.z -= 2
+	if body.is_in_group("Victims"):
+		someone_sleeping = true
+		$Timer.paused = false
+		sleep_timer.emit(100)
+		$Timer.start(SLEEP_NEEDED)
+		sleeping_vicim_name.emit(body.name)
+		victim = body
+		remove_from_group("Unoccupied_beds")
 
 func _on_area_3d_body_exited(body):
 	if body.is_in_group("Player"):
@@ -41,7 +37,14 @@ func _on_area_3d_body_exited(body):
 		if someone_sleeping:
 			$Timer.paused = false
 			$Timer.start(SLEEP_NEEDED)
-		return
+	if body.is_in_group("Victims"):
+		someone_sleeping = false
+		sleep_timer.emit(0)
+		$Timer.paused = true
+		sleeping_vicim_name.emit("")
+		victim = null
+		body.wake_up()
+		add_to_group("Unoccupied_beds")
 
 func _ready():
 	$MeshInstance3D.mesh.material = $MeshInstance3D.mesh.material.duplicate()
@@ -55,7 +58,6 @@ func _ready():
 func _process(delta):
 	if !$Timer.paused and someone_sleeping:
 		sleep_timer.emit(100*$Timer.time_left/SLEEP_NEEDED)
-		
 
 func _on_timer_timeout():
 	add_child(preload("res://GUI/GameOver.tscn").instantiate())
