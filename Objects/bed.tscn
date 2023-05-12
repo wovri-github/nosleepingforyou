@@ -18,7 +18,7 @@ size = Vector3(0.2, 0.1, 0.2)
 [sub_resource type="BoxMesh" id="BoxMesh_y5nb5"]
 size = Vector3(0.2, 0.1, 0.2)
 
-[node name="Bed" type="StaticBody3D" groups=["Beds"]]
+[node name="Bed" type="StaticBody3D" groups=["Beds", "Unoccupied_beds"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 0)
 script = ExtResource("1_t46ld")
 
