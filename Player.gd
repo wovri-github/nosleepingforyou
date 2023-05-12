@@ -25,6 +25,7 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	if position.y < -10:
 		add_child(preload("res://GUI/GameOver.tscn").instantiate())
+		get_tree().paused = true
 	
 	# Add the gravity.
 	if not is_on_floor():

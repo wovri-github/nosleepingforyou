@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const WAKING_TIME = 5
 const SPEED = 5.0
-var sleeping = true
+var sleeping = false
 var rng = RandomNumberGenerator.new()
 @onready var nav_agent := $NavigationAgent3D
 

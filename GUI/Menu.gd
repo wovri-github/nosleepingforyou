@@ -14,3 +14,4 @@ func _process(delta):
 func _on_button_pressed():
 	get_tree().change_scene_to_packed(game)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	get_tree().paused = false

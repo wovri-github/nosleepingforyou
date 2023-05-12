@@ -88,7 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 25)
 
 [node name="Ziom" parent="." instance=ExtResource("5_vx32k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.598, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.598, 0, -5)
 
 [node name="Grzegorz" parent="." instance=ExtResource("5_vx32k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.45352, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.45352, 0, 2)

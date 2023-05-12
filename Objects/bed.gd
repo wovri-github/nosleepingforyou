@@ -32,6 +32,8 @@ func _on_area_3d_body_entered(body):
 		
 
 func _on_area_3d_body_exited(body):
+	if get_tree().paused:
+		return
 	if body.is_in_group("Player"):
 		reset_color()
 		if someone_sleeping:
@@ -61,6 +63,7 @@ func _process(delta):
 
 func _on_timer_timeout():
 	add_child(preload("res://GUI/GameOver.tscn").instantiate())
+	get_tree().paused = true
 	
 
 

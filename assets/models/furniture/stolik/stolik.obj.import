@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b28s51buvcr2f"
+path="res://.godot/imported/stolik.obj-c9ac87d7d4599fe314561d4b6ee65fbc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stolik.obj-c9ac87d7d4599fe314561d4b6ee65fbc.mesh"]
+
+source_file="res://assets/models/furniture/stolik/stolik.obj"
+dest_files=["res://.godot/imported/stolik.obj-c9ac87d7d4599fe314561d4b6ee65fbc.mesh", "res://.godot/imported/stolik.obj-c9ac87d7d4599fe314561d4b6ee65fbc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -21,6 +21,7 @@ mesh = SubResource("CapsuleMesh_y3o4b")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+autostart = true
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 agent_height_offset = 0.1
