@@ -39,4 +39,5 @@ func _process(delta):
 
 func _on_timer_timeout():
 	add_child(preload("res://GUI/GameOver.tscn").instantiate())
+	
 
