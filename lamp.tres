@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://c38nidxc02c8e"]
+
+[ext_resource type="Texture2D" uid="uid://bk6ej1vqe2qi0" path="res://assets/models/furniture/lamp/lamp_DefaultMaterial_BaseColor.png" id="1_ccpdp"]
+[ext_resource type="Texture2D" uid="uid://cm62g2q48n0n0" path="res://assets/models/furniture/lamp/lamp_DefaultMaterial_Metallic.png" id="2_k3nye"]
+[ext_resource type="Texture2D" uid="uid://dhdrq3qkgmawv" path="res://assets/models/furniture/lamp/lamp_DefaultMaterial_Normal.png" id="3_nuw4a"]
+[ext_resource type="Texture2D" uid="uid://bykqe8uwm5ilw" path="res://assets/models/furniture/lamp/lamp_DefaultMaterial_Roughness.png" id="4_yrhgp"]
+
+[resource]
+albedo_texture = ExtResource("1_ccpdp")
+metallic = 1.0
+metallic_texture = ExtResource("2_k3nye")
+roughness_texture = ExtResource("4_yrhgp")
+normal_enabled = true
+normal_texture = ExtResource("3_nuw4a")

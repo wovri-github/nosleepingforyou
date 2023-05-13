@@ -1,0 +1,27 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://b0238mfvjbjx7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5jecm"]
+load_path = "res://.godot/imported/shelf_DefaultMaterial_BaseColor.png-492902c65d68a59e666d2d1e90e465d0.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_maafj"]
+load_path = "res://.godot/imported/shelf_DefaultMaterial_Height.png-ba42821e688d1a0c8d108da0747acfad.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tvvhe"]
+load_path = "res://.godot/imported/shelf_DefaultMaterial_Metallic.png-8ab6991d8b8afbe2d4e6bbbb65b8312a.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_03mra"]
+load_path = "res://.godot/imported/shelf_DefaultMaterial_Normal.png-58e43f4280f62f849abdb11374d0df14.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2rptc"]
+load_path = "res://.godot/imported/shelf_DefaultMaterial_Roughness.png-74d31f396c8789e349efda28a10f0464.s3tc.ctex"
+
+[resource]
+albedo_color = Color(0.65098, 0.705882, 0.807843, 1)
+albedo_texture = SubResource("CompressedTexture2D_5jecm")
+metallic = 1.0
+metallic_texture = SubResource("CompressedTexture2D_tvvhe")
+roughness_texture = SubResource("CompressedTexture2D_2rptc")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_03mra")
+heightmap_enabled = true
+heightmap_texture = SubResource("CompressedTexture2D_maafj")
