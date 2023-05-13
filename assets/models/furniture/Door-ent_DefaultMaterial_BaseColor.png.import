@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rkte5elt0t1e"
-path.s3tc="res://.godot/imported/fridge_DefaultMaterial_Roughness.png-40c456d357433323d478fa75d777f605.s3tc.ctex"
+uid="uid://dmdcwpg4wo3ro"
+path.s3tc="res://.godot/imported/Door-ent_DefaultMaterial_BaseColor.png-d4a03d5dda745729188ce07291347b23.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/furniture/fridge/fridge_DefaultMaterial_Roughness.png"
-dest_files=["res://.godot/imported/fridge_DefaultMaterial_Roughness.png-40c456d357433323d478fa75d777f605.s3tc.ctex"]
+source_file="res://assets/models/furniture/Door-ent_DefaultMaterial_BaseColor.png"
+dest_files=["res://.godot/imported/Door-ent_DefaultMaterial_BaseColor.png-d4a03d5dda745729188ce07291347b23.s3tc.ctex"]
 
 [params]
 

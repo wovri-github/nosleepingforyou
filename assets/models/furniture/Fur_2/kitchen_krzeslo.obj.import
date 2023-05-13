@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cs8nm2xofuf8"
+path="res://.godot/imported/kitchen_krzeslo.obj-d88fec35b33d4cc5bf8d5c69d581db98.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kitchen_krzeslo.obj-d88fec35b33d4cc5bf8d5c69d581db98.mesh"]
+
+source_file="res://assets/models/furniture/Fur_2/kitchen_krzeslo.obj"
+dest_files=["res://.godot/imported/kitchen_krzeslo.obj-d88fec35b33d4cc5bf8d5c69d581db98.mesh", "res://.godot/imported/kitchen_krzeslo.obj-d88fec35b33d4cc5bf8d5c69d581db98.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

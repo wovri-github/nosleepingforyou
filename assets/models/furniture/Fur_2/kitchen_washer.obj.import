@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2uhawssh1767"
+path="res://.godot/imported/kitchen_washer.obj-62a31a72f84bbd268aeafb4ebe48345b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kitchen_washer.obj-62a31a72f84bbd268aeafb4ebe48345b.mesh"]
+
+source_file="res://assets/models/furniture/Fur_2/kitchen_washer.obj"
+dest_files=["res://.godot/imported/kitchen_washer.obj-62a31a72f84bbd268aeafb4ebe48345b.mesh", "res://.godot/imported/kitchen_washer.obj-62a31a72f84bbd268aeafb4ebe48345b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

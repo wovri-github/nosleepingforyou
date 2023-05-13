@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b3b07qfvkn5iq"]
+
+[ext_resource type="Texture2D" uid="uid://1y55tt60ryrv" path="res://assets/models/furniture/Fur_2/furniture_DefaultMaterial_BaseColor.png" id="1_sguoh"]
+[ext_resource type="Texture2D" uid="uid://eiewi5ak5f0g" path="res://assets/models/furniture/Fur_2/furniture_DefaultMaterial_Normal.png" id="2_sjlex"]
+
+[resource]
+albedo_texture = ExtResource("1_sguoh")
+normal_enabled = true
+normal_texture = ExtResource("2_sjlex")
