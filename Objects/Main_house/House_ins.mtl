@@ -1,0 +1,102 @@
+# Blender 3.5.1 MTL File: 'Sword.blend'
+# www.blender.org
+
+newmtl Entr.Br
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/stimo/OneDrive/Робочий стіл/Cat game/brick-wall-painted-white.jpg
+
+newmtl Floor
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/stimo/OneDrive/Робочий стіл/Cat game/floor-2.jpg
+
+newmtl Floor_Room-3
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/stimo/OneDrive/Робочий стіл/Cat game/floor-2.jpg
+
+newmtl Kitchen_tiles
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/stimo/OneDrive/Робочий стіл/Cat game/Kitchen_tiles.jpg
+
+newmtl Material.003
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/stimo/OneDrive/Робочий стіл/Cat game/wall_cor.jpg
+
+newmtl Room1_wall
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/stimo/OneDrive/Робочий стіл/Cat game/Wallpaper_1.jpg
+
+newmtl Room_1_Floor
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg
+
+newmtl Wallpaper2
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/stimo/OneDrive/Робочий стіл/Cat game/Wallpaper_2.jpg
+
+newmtl floor_3\
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/stimo/OneDrive/Робочий стіл/Cat game/Floor_3.jpg
+
+newmtl toilet_floor
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/stimo/OneDrive/Робочий стіл/Cat game/Toilet_tiles.jpg

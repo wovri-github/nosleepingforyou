@@ -1,0 +1,99 @@
+[gd_scene load_steps=30 format=3 uid="uid://dft8w5y3vq0um"]
+
+[ext_resource type="ArrayMesh" uid="uid://comrapge20mc6" path="res://Objects/Main_house/House_ins.obj" id="1_aead5"]
+[ext_resource type="Texture2D" uid="uid://nvch2gsuinmu" path="res://Objects/Main_house/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg" id="2_kvo4h"]
+[ext_resource type="Material" uid="uid://bp5sqnkbbf13g" path="res://node_3d.tres" id="3_fhu7e"]
+[ext_resource type="Texture2D" uid="uid://bmg3x1086x812" path="res://Objects/Main_house/Wallpaper_1.jpg" id="3_od3lc"]
+[ext_resource type="Texture2D" uid="uid://bu0ny3l8fpd6g" path="res://Objects/Main_house/Wallpaper_2.jpg" id="4_7qxj8"]
+[ext_resource type="Material" uid="uid://bfu1p1mmupww7" path="res://node_4d.tres" id="4_jicp3"]
+[ext_resource type="Texture2D" uid="uid://yu7g3kknxmdt" path="res://Objects/Main_house/Floor_3.jpg" id="5_bwutw"]
+[ext_resource type="Texture2D" uid="uid://csmrx710yj6tc" path="res://Objects/Main_house/Kitchen_tiles.jpg" id="8_dn6qr"]
+[ext_resource type="Texture2D" uid="uid://daf4c5aik1u1o" path="res://Objects/Main_house/floor-2.jpg" id="9_qe8g3"]
+[ext_resource type="Texture2D" uid="uid://csc4cx1hi054g" path="res://Objects/Main_house/wall_cor.jpg" id="10_pn5n8"]
+[ext_resource type="Texture2D" uid="uid://bbqvvjy1eg5cr" path="res://Objects/Main_house/Toilet_tiles.jpg" id="11_bf0pl"]
+[ext_resource type="Texture2D" uid="uid://81jgfkxmwdk" path="res://Objects/Main_house/brick-wall-painted-white.jpg" id="12_uuycn"]
+[ext_resource type="PackedScene" uid="uid://cntax283353xi" path="res://Objects/bed.tscn" id="13_hd2m1"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sscl3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7w5l"]
+albedo_color = Color(0.784314, 0.784314, 0.784314, 1)
+albedo_texture = ExtResource("2_kvo4h")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqrsr"]
+albedo_texture = ExtResource("4_7qxj8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2vxu"]
+albedo_color = Color(0.552941, 0.568627, 0.482353, 1)
+albedo_texture = ExtResource("5_bwutw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gohto"]
+albedo_texture = ExtResource("3_od3lc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rqo4n"]
+albedo_texture = ExtResource("4_7qxj8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fv3p5"]
+albedo_texture = ExtResource("8_dn6qr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tj6ut"]
+albedo_texture = ExtResource("8_dn6qr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdhag"]
+albedo_texture = ExtResource("9_qe8g3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4mqe"]
+albedo_texture = ExtResource("10_pn5n8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qyx4x"]
+albedo_texture = ExtResource("11_bf0pl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wto6"]
+albedo_texture = ExtResource("11_bf0pl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iletf"]
+albedo_texture = ExtResource("9_qe8g3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5jq6"]
+albedo_texture = ExtResource("3_od3lc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j27qx"]
+albedo_texture = ExtResource("12_uuycn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_451e0"]
+albedo_texture = ExtResource("9_qe8g3")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="HouseIns" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34851, -1.19209e-07, -0.37172)
+mesh = SubResource("ArrayMesh_sscl3")
+
+[node name="HouseIns2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.721076, 0, 0.244211)
+mesh = SubResource("ArrayMesh_sscl3")
+
+[node name="HouseIns3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46937, 0, -0.510381)
+mesh = ExtResource("1_aead5")
+surface_material_override/0 = SubResource("StandardMaterial3D_r7w5l")
+surface_material_override/1 = ExtResource("3_fhu7e")
+surface_material_override/2 = ExtResource("4_jicp3")
+surface_material_override/3 = SubResource("StandardMaterial3D_qqrsr")
+surface_material_override/4 = SubResource("StandardMaterial3D_i2vxu")
+surface_material_override/5 = SubResource("StandardMaterial3D_gohto")
+surface_material_override/6 = ExtResource("4_jicp3")
+surface_material_override/7 = SubResource("StandardMaterial3D_rqo4n")
+surface_material_override/8 = SubResource("StandardMaterial3D_fv3p5")
+surface_material_override/9 = SubResource("StandardMaterial3D_tj6ut")
+surface_material_override/10 = SubResource("StandardMaterial3D_fdhag")
+surface_material_override/11 = SubResource("StandardMaterial3D_n4mqe")
+surface_material_override/12 = SubResource("StandardMaterial3D_qyx4x")
+surface_material_override/13 = SubResource("StandardMaterial3D_8wto6")
+surface_material_override/14 = SubResource("StandardMaterial3D_iletf")
+surface_material_override/15 = SubResource("StandardMaterial3D_f5jq6")
+surface_material_override/16 = SubResource("StandardMaterial3D_j27qx")
+surface_material_override/17 = SubResource("StandardMaterial3D_451e0")
+
+[node name="Bed" parent="." instance=ExtResource("13_hd2m1")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.4593, 0.435211, -0.261298)
