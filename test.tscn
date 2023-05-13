@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwgl0rwmauhs4"]
+[gd_scene load_steps=15 format=3 uid="uid://bwgl0rwmauhs4"]
 
 [ext_resource type="PackedScene" uid="uid://d24ij6ocm73vt" path="res://player.tscn" id="1_7o74r"]
 [ext_resource type="PackedScene" uid="uid://csv75rgonsl2i" path="res://Objects/floor_part.tscn" id="1_jt4de"]
 [ext_resource type="PackedScene" uid="uid://cntax283353xi" path="res://Objects/bed.tscn" id="2_6mrob"]
+[ext_resource type="PackedScene" uid="uid://b37jqy7fbxyta" path="res://Objects/place.tscn" id="4_55d2r"]
 [ext_resource type="Script" path="res://Time.gd" id="5_3y3o5"]
 [ext_resource type="PackedScene" uid="uid://dpwfttkot6xoo" path="res://Objects/victim.tscn" id="5_vx32k"]
 
@@ -87,6 +88,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 5)
 
 [node name="Bed4" parent="NavigationRegion3D/Beds" instance=ExtResource("2_6mrob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 25)
+
+[node name="Place" parent="NavigationRegion3D" instance=ExtResource("4_55d2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83619, 0, -1.93713)
+
+[node name="Place2" parent="NavigationRegion3D" instance=ExtResource("4_55d2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57613, 0, -6.86132)
+
+[node name="Place3" parent="NavigationRegion3D" instance=ExtResource("4_55d2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21863, 0, 2.86054)
+
+[node name="Place4" parent="NavigationRegion3D" instance=ExtResource("4_55d2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.59541)
 
 [node name="Ziom" parent="." instance=ExtResource("5_vx32k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.598, 0, -5)

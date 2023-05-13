@@ -5926,6 +5926,7 @@ one_shot = true
 autostart = true
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+target_desired_distance = 2.0
 agent_height_offset = 0.1
 
 [node name="Guy" type="Node3D" parent="."]
@@ -6539,4 +6540,5 @@ libraries = {
 }
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
 [connection signal="animation_changed" from="Guy/AnimationPlayer" to="." method="_on_animation_player_animation_changed"]

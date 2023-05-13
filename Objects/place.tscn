@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b37jqy7fbxyta"]
+
+[ext_resource type="Script" path="res://Objects/place.gd" id="1_h0wq7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xepwk"]
+
+[node name="Place" type="Node3D" groups=["Unoccupied_places"]]
+script = ExtResource("1_h0wq7")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_xepwk")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
