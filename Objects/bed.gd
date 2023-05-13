@@ -57,7 +57,7 @@ func _ready():
 	sleep_timer.connect(bar.set_bar_value)
 	sleeping_vicim_name.connect(bar.set_victim_name)
 
-func _process(delta):
+func _process(_delta):
 	if !$Timer.paused and someone_sleeping:
 		sleep_timer.emit(100*$Timer.time_left/SLEEP_NEEDED)
 

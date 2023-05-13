@@ -32,7 +32,7 @@ func _on_timer_timeout():
 
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if !sleeping:
 		var current_location = global_transform.origin
 		var next_location = nav_agent.get_next_path_position()
