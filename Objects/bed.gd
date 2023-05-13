@@ -29,7 +29,7 @@ func _on_area_3d_body_entered(body):
 		if someone_sleeping:
 			$Timer.paused = true
 			sleep_timer.emit(100)
-			victim.position.z -= 2
+			victim.position.z -= 1
 			someone_sleeping = false
 			sleep_timer.emit(0)
 			$Timer.paused = true

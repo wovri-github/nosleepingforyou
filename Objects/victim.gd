@@ -28,18 +28,23 @@ func _on_timer_timeout():
 	$Guy/AnimationPlayer.stop()
 	$Guy/AnimationPlayer.clear_queue()
 	$Guy/AnimationPlayer.queue("walk")
-	#position = target_bed.position + Vector3(0.4,0,0)
 
 
 
 func _physics_process(_delta):
+	if $Guy/AnimationPlayer.current_animation == "sleep":
+		position = nav_agent.target_position + Vector3(-0.3,0,0)
+		position.y = -0.1
+	
+	if $Guy/AnimationPlayer.current_animation == "layDown":
+		position = nav_agent.target_position + Vector3(-0.65,0,0)
+		position.y = 0.1
+		
 	if !sleeping:
 		var current_location = global_transform.origin
 		var next_location = nav_agent.get_next_path_position()
 		if nav_agent.distance_to_target() < 1.5:
 			sleeping = true
-			position = nav_agent.target_position + Vector3(0.4,0,0)
-			position.y = 0
 			$Guy/AnimationPlayer.stop()
 			$Guy/AnimationPlayer.clear_queue()
 			$Guy/AnimationPlayer.queue("layDown")
