@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://2my53lat438g"]
+
+[ext_resource type="ArrayMesh" uid="uid://dhk1dakgj5vqn" path="res://assets/models/furniture/shelf/shelf.obj" id="1_5h2qn"]
+[ext_resource type="Material" uid="uid://do4y7h1lwkbbk" path="res://Shelf.tres" id="2_nsinc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y47ew"]
+points = PackedVector3Array(-1.5061, 0.13978, -2.32837, 1.624, 9.24067, 2.22252, 1.66789, 5.2711, 0.369572, 1.53231, 9.40511, -2.3578, -1.5061, 9.34536, 2.27532, 1.624, 0.24537, 2.22252, 1.624, 0.24537, -2.27557, -1.5061, 0.13978, 2.27532, -1.5061, 9.34536, -2.32837, 1.55463, 9.4803, 2.34235, 1.624, 9.24067, -2.27557, 1.6706, 4.214, 0.370279)
+
+[node name="Shelf" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.607, 0, -19.613)
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.228298, 0, 0, 0, 0.228298, 0, 0, 0, 0.228298, 0.000170231, 0, 0.000400543)
+mesh = ExtResource("1_5h2qn")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_nsinc")
+surface_material_override/1 = ExtResource("2_nsinc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-9.97921e-09, 0, -0.228298, 0, 0.228298, 0, 0.228298, 0, -9.97921e-09, 0.000170231, 0, 0.000400543)
+shape = SubResource("ConvexPolygonShape3D_y47ew")
