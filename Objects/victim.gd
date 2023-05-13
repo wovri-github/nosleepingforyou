@@ -17,7 +17,7 @@ func _ready():
 func wake_up():
 	$Guy/AnimationPlayer.stop()
 	$Guy/AnimationPlayer.clear_queue()
-	$Guy/AnimationPlayer.play_backwards("layDown")
+	$Guy/AnimationPlayer.play_backwards("waking_up")
 
 func move_on():
 	randomize()
@@ -85,6 +85,6 @@ func _on_navigation_agent_3d_target_reached():
 		target_place.victim_reached(self)
 
 func _on_animation_player_animation_finished(anim_name):
-	if anim_name == "layDown":
+	if anim_name == "waking_up":
 		target_place.add_to_group("Unoccupied_beds")
 		move_on()
