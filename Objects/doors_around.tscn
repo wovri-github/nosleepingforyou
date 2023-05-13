@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2nrhktg8cixq"]
+
+[ext_resource type="ArrayMesh" uid="uid://ds15fihcs2lsg" path="res://assets/models/furniture/Fur_2/doors_around.obj" id="1_vvtp2"]
+[ext_resource type="Material" uid="uid://b3b07qfvkn5iq" path="res://furn.tres" id="2_b258h"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ui36s"]
+points = PackedVector3Array(-0.218995, -0.0308952, 11.9515, -0.0462502, 2.7333, 13.5496, -0.218995, 2.7333, 13.5496, -0.0462502, -0.0308952, 13.5496, -0.0462502, 2.7333, 11.9515, -0.218995, 2.7333, 11.9515, -0.218995, -0.0308952, 13.5496, -0.0462502, -0.0308952, 11.9515)
+
+[node name="DoorsAround" type="StaticBody3D"]
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.0328, 0, 0, 0, 1, 0.1, 0, -11.972)
+mesh = ExtResource("1_vvtp2")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_b258h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.0328, 0, 0, 0, 1, 0.1, 0, -11.972)
+shape = SubResource("ConvexPolygonShape3D_ui36s")
