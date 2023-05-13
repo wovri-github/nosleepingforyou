@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const WAKING_TIME = 5
 const SPEED = 5.0
-const BED_CHANCE = 0
+const BED_CHANCE = 0.5
 var sleeping = false
 var target_place
 var bed: Bed = null
