@@ -103,3 +103,15 @@ func _on_animation_player_animation_finished(anim_name):
 		#position = bed.get_node("SitPosition").global_transform.origin
 		position.y = 0
 		move_on()
+
+
+
+func _on_area_3d_body_entered(body):
+	if body.is_in_group("Player"):
+		# To donav_agent.
+		print(body)
+
+
+func _on_area_3d_body_exited(body):
+	if body.is_in_group("Player"):
+		pass
