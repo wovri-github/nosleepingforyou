@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nvch2gsuinmu"
-path.s3tc="res://.godot/imported/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg-ea54492def630300b088a6cad5a48531.s3tc.ctex"
+uid="uid://csc4cx1hi054g"
+path.s3tc="res://.godot/imported/wall_cor.jpg-0c808c438895753f3dadf9229808f986.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Main_house/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg"
-dest_files=["res://.godot/imported/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg-ea54492def630300b088a6cad5a48531.s3tc.ctex"]
+source_file="res://Objects/Main_house/wall_cor.jpg"
+dest_files=["res://.godot/imported/wall_cor.jpg-0c808c438895753f3dadf9229808f986.s3tc.ctex"]
 
 [params]
 

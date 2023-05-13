@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nvch2gsuinmu"
-path.s3tc="res://.godot/imported/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg-ea54492def630300b088a6cad5a48531.s3tc.ctex"
+uid="uid://81jgfkxmwdk"
+path.s3tc="res://.godot/imported/brick-wall-painted-white.jpg-389c119cac4b98e7aac2e5b4886df7c2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Main_house/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg"
-dest_files=["res://.godot/imported/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg-ea54492def630300b088a6cad5a48531.s3tc.ctex"]
+source_file="res://Objects/Main_house/brick-wall-painted-white.jpg"
+dest_files=["res://.godot/imported/brick-wall-painted-white.jpg-389c119cac4b98e7aac2e5b4886df7c2.s3tc.ctex"]
 
 [params]
 

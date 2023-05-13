@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nvch2gsuinmu"
-path.s3tc="res://.godot/imported/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg-ea54492def630300b088a6cad5a48531.s3tc.ctex"
+uid="uid://csmrx710yj6tc"
+path.s3tc="res://.godot/imported/Kitchen_tiles.jpg-0365280ba5d0fabde5ba6b1c9ed1a37c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Main_house/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg"
-dest_files=["res://.godot/imported/vecteezy_wooden-parquet-floor-texture-background-vector-illustration_8545428.jpg-ea54492def630300b088a6cad5a48531.s3tc.ctex"]
+source_file="res://Objects/Main_house/Kitchen_tiles.jpg"
+dest_files=["res://.godot/imported/Kitchen_tiles.jpg-0365280ba5d0fabde5ba6b1c9ed1a37c.s3tc.ctex"]
 
 [params]
 
