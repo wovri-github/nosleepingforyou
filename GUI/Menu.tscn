@@ -1,7 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://bor178du6hymf"]
+[gd_scene load_steps=11 format=3 uid="uid://bor178du6hymf"]
 
 [ext_resource type="Theme" uid="uid://cm0ayacm4lssn" path="res://GUI/GUI.tres" id="1_74264"]
 [ext_resource type="Script" path="res://GUI/Menu.gd" id="1_an676"]
+[ext_resource type="Texture2D" uid="uid://cmote7c8s70jg" path="res://mainmenu/nocat.png" id="3_u6nqo"]
+[ext_resource type="Texture2D" uid="uid://q83f3ups7eo" path="res://mainmenu/catanim/sprite_0.png" id="4_pngo7"]
+[ext_resource type="Texture2D" uid="uid://bim3asxtrqvxe" path="res://mainmenu/catanim/sprite_1.png" id="5_g6h6r"]
+[ext_resource type="Texture2D" uid="uid://da3q33sumsuyp" path="res://mainmenu/catanim/sprite_2.png" id="6_foefl"]
+[ext_resource type="Texture2D" uid="uid://c01bkq4u66f3a" path="res://mainmenu/catanim/sprite_3.png" id="7_8pjot"]
+[ext_resource type="Texture2D" uid="uid://05m4kqikhlvg" path="res://mainmenu/catanim/sprite_4.png" id="8_ftcvr"]
+[ext_resource type="Texture2D" uid="uid://bwnw4vpi5qup1" path="res://mainmenu/catanim/sprite_5.png" id="9_fayau"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r7d4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pngo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g6h6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_foefl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8pjot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ftcvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fayau")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="Menu" type="Control"]
 process_mode = 3
@@ -14,21 +47,27 @@ grow_vertical = 2
 theme = ExtResource("1_74264")
 script = ExtResource("1_an676")
 
-[node name="Button" type="Button" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = ExtResource("3_u6nqo")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = -26.0
-offset_right = 77.0
-offset_bottom = 27.0
+offset_left = 374.0
+offset_top = -99.0
+offset_right = 528.0
+offset_bottom = -46.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
-text = "Start"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 1
@@ -37,14 +76,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -79.0
-offset_top = 51.0
-offset_right = 79.0
-offset_bottom = 104.0
+offset_left = 371.0
+offset_top = 43.0
+offset_right = 529.0
+offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
-text = "Quit"
+text = "
+"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(386, 535)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_r7d4m")
+frame_progress = 0.673129
+
+[connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
