@@ -3,7 +3,7 @@ extends CharacterBody3D
 const WAKING_TIME = 5
 const SPEED = 5.0
 var sleeping = false
-var bed = null
+var bed: Bed = null
 var rng = RandomNumberGenerator.new()
 @onready var nav_agent := $NavigationAgent3D
 
@@ -50,7 +50,6 @@ func _physics_process(_delta):
 			$Guy/AnimationPlayer.queue("layDown")
 			$Guy/AnimationPlayer.queue("sleep")
 			rotation.y = bed.rotation.y - PI / 2
-			bed.victim_sleep(self)
 		else:
 			var new_velocity = (next_location - current_location).normalized() * SPEED
 			new_velocity.y = 0
@@ -61,3 +60,8 @@ func _physics_process(_delta):
 
 func set_target_location(target_location):
 	nav_agent.set_target_position(target_location)
+
+
+func _on_animation_player_animation_changed(old_name, new_name):
+	if old_name == "layDown" and new_name == "sleep":
+		bed.victim_sleep(self)

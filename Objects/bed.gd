@@ -1,4 +1,5 @@
 extends StaticBody3D
+class_name Bed
 
 const sleep_bar_tscn = preload("res://sleep_bar.tscn")
 const SLEEP_NEEDED = 30
