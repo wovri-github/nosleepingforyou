@@ -9,7 +9,7 @@ var bed: Bed = null
 var rng = RandomNumberGenerator.new()
 @onready var detector = get_node("%Area3D")
 @onready var nav_agent := $NavigationAgent3D
-
+@onready var wait_to_exit_body = %ExitBodyAwait
 const wake_up_texts = [
 	"Jak cię dorwę!",
 	"Zgiń przepadnij!",
@@ -150,12 +150,14 @@ func _on_area_3d_body_entered(body):
 		$Label3D.text = chase_texts[rng.randi() % chase_texts.size()]
 		target_place = body
 		set_target_location(body)
-		print("Entered: ", body)
+		wait_to_exit_body.start()
 
 
 func _on_area_3d_body_exited(body):
 	if body.is_in_group("Player"):
+		await wait_to_exit_body.timeout
 		target_place = prev_target_place
 		set_target_location(target_place)
-		$Label3D.text = ""
 		print(body)
+		$Label3D.text = ""
+	
