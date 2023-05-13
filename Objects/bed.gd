@@ -37,7 +37,6 @@ func _on_area_3d_body_entered(body):
 			sleeping_vicim_name.emit("")
 			victim.wake_up()
 			victim = null
-			add_to_group("Unoccupied_beds")
 
 func _on_area_3d_body_exited(body):
 	if get_tree().paused:

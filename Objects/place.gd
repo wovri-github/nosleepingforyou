@@ -17,7 +17,6 @@ func victim_reached(body):
 	victim = body
 
 func _on_timer_timeout():
-	print("Timer reached")
 	is_occupied = false
 	$Timer.stop()
 	victim.move_on()

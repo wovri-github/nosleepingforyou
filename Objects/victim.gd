@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-const WAKING_TIME = 5
 const SPEED = 5.0
 const BED_CHANCE = 0.5
 var sleeping = false
@@ -12,17 +11,13 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	rng.randomize()
 	$Guy/AnimationPlayer.queue("Idle")
+	move_on()
 
-	
 
 func wake_up():
 	$Guy/AnimationPlayer.stop()
 	$Guy/AnimationPlayer.clear_queue()
-	$Guy/AnimationPlayer.queue("Idle")
-	$Timer.start(WAKING_TIME)
-
-func _on_timer_timeout():
-	move_on()
+	$Guy/AnimationPlayer.play_backwards("layDown")
 
 func move_on():
 	randomize()
@@ -68,6 +63,7 @@ func set_target_location(target_location):
 	nav_agent.set_target_position(target_location)
 
 
+
 func _on_animation_player_animation_changed(old_name, new_name):
 	if old_name == "layDown" and new_name == "sleep":
 		bed.victim_sleep(self)
@@ -87,5 +83,8 @@ func _on_navigation_agent_3d_target_reached():
 		$Guy/AnimationPlayer.clear_queue()
 		$Guy/AnimationPlayer.queue("Idle")
 		target_place.victim_reached(self)
-		
-	
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "layDown":
+		target_place.add_to_group("Unoccupied_beds")
+		move_on()
