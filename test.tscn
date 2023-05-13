@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwgl0rwmauhs4"]
+[gd_scene load_steps=14 format=3 uid="uid://bwgl0rwmauhs4"]
 
 [ext_resource type="PackedScene" uid="uid://d24ij6ocm73vt" path="res://player.tscn" id="1_7o74r"]
 [ext_resource type="PackedScene" uid="uid://csv75rgonsl2i" path="res://Objects/floor_part.tscn" id="1_jt4de"]
 [ext_resource type="PackedScene" uid="uid://cntax283353xi" path="res://Objects/bed.tscn" id="2_6mrob"]
+[ext_resource type="Script" path="res://Time.gd" id="5_3y3o5"]
 [ext_resource type="PackedScene" uid="uid://dpwfttkot6xoo" path="res://Objects/victim.tscn" id="5_vx32k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7sc84"]
@@ -92,3 +93,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.598, 0, -5)
 
 [node name="Grzegorz" parent="." instance=ExtResource("5_vx32k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.45352, 0, 2)
+
+[node name="Time" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.942
+anchor_right = 1.0
+anchor_bottom = 0.035
+offset_left = -0.184082
+offset_bottom = 0.32
+theme_override_font_sizes/font_size = 25
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_3y3o5")
+
+[node name="Timer" type="Timer" parent="Time"]
+one_shot = true
+
+[connection signal="timeout" from="Time/Timer" to="Time" method="_on_timer_timeout"]
