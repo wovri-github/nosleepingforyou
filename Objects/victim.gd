@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 1.8
 const BED_CHANCE = 0.5
 var sleeping = false
 var target_place
@@ -28,7 +28,7 @@ func move_on():
 		bed = target_bed
 		target_place = target_bed
 		target_bed.remove_from_group("Unoccupied_beds")
-		set_target_location(target_bed.position)
+		set_target_location(target_bed.get_node("SitPosition").global_transform.origin)
 	else:
 		var places = get_tree().get_nodes_in_group("Unoccupied_places")
 		target_place = places[rng.randi() % places.size()]
@@ -100,4 +100,6 @@ func _on_animation_player_animation_finished(anim_name):
 		$Guy/AnimationPlayer.play_backwards("sitToStand")
 	if anim_name == "sitToStand":
 		target_place.add_to_group("Unoccupied_beds")
+		#position = bed.get_node("SitPosition").global_transform.origin
+		position.y = 0
 		move_on()
