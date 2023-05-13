@@ -1,6 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cntax283353xi"]
+[gd_scene load_steps=13 format=3 uid="uid://cntax283353xi"]
 
 [ext_resource type="Script" path="res://Objects/bed.gd" id="1_t46ld"]
+[ext_resource type="Texture2D" uid="uid://bqrae1vyoorb6" path="res://assets/models/furniture/bed/bed1_DefaultMaterial_BaseColor.png" id="2_qk55r"]
+[ext_resource type="ArrayMesh" uid="uid://cakn8n8c0p63w" path="res://assets/models/furniture/bed/Bed-1.obj" id="3_ncmsa"]
+[ext_resource type="Texture2D" uid="uid://s3do44yhbm3i" path="res://assets/models/furniture/bed/bed1_DefaultMaterial_Normal.png" id="4_6ggwn"]
+[ext_resource type="Texture2D" uid="uid://bfiwx3aw7xnmd" path="res://assets/models/furniture/bed/bed1_DefaultMaterial_Roughness.png" id="5_fpd1i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b8bpg"]
 size = Vector3(2, 0.5, 1)
@@ -18,6 +22,14 @@ size = Vector3(0.2, 0.1, 0.2)
 [sub_resource type="BoxMesh" id="BoxMesh_y5nb5"]
 size = Vector3(0.2, 0.1, 0.2)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iimgb"]
+albedo_texture = ExtResource("2_qk55r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d5ql"]
+roughness_texture = ExtResource("5_fpd1i")
+normal_enabled = true
+normal_texture = ExtResource("4_6ggwn")
+
 [node name="Bed" type="StaticBody3D" groups=["Beds", "Unoccupied_beds"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 0)
 script = ExtResource("1_t46ld")
@@ -26,6 +38,7 @@ script = ExtResource("1_t46ld")
 shape = SubResource("BoxShape3D_b8bpg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("BoxMesh_oa1o2")
 
 [node name="Pillow" type="Area3D" parent="."]
@@ -36,10 +49,17 @@ collision_mask = 3
 shape = SubResource("BoxShape3D_2ebph")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pillow"]
+visible = false
 mesh = SubResource("BoxMesh_y5nb5")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Bed-1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.838891, -0.5, -0.00707567)
+material_override = SubResource("StandardMaterial3D_iimgb")
+mesh = ExtResource("3_ncmsa")
+surface_material_override/0 = SubResource("StandardMaterial3D_8d5ql")
 
 [connection signal="body_entered" from="Pillow" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Pillow" to="." method="_on_area_3d_body_exited"]
