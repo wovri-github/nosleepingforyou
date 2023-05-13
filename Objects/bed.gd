@@ -14,6 +14,14 @@ func change_color():
 func reset_color():
 	$MeshInstance3D.mesh.material.albedo_color = Color.AQUA
 
+func victim_sleep(body):
+	someone_sleeping = true
+	$Timer.paused = false
+	$Timer.stop()
+	sleep_timer.emit(100)
+	$Timer.start(SLEEP_NEEDED)
+	sleeping_vicim_name.emit(body.name)
+	victim = body
 
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("Player"):
@@ -22,14 +30,13 @@ func _on_area_3d_body_entered(body):
 			$Timer.paused = true
 			sleep_timer.emit(100)
 			victim.position.z -= 2
-	if body.is_in_group("Victims"):
-		someone_sleeping = true
-		$Timer.paused = false
-		sleep_timer.emit(100)
-		$Timer.start(SLEEP_NEEDED)
-		sleeping_vicim_name.emit(body.name)
-		victim = body
-		
+			someone_sleeping = false
+			sleep_timer.emit(0)
+			$Timer.paused = true
+			sleeping_vicim_name.emit("")
+			victim.wake_up()
+			victim = null
+			add_to_group("Unoccupied_beds")
 
 func _on_area_3d_body_exited(body):
 	if get_tree().paused:
@@ -38,15 +45,8 @@ func _on_area_3d_body_exited(body):
 		reset_color()
 		if someone_sleeping:
 			$Timer.paused = false
+			$Timer.stop()
 			$Timer.start(SLEEP_NEEDED)
-	if body.is_in_group("Victims"):
-		someone_sleeping = false
-		sleep_timer.emit(0)
-		$Timer.paused = true
-		sleeping_vicim_name.emit("")
-		victim = null
-		body.wake_up()
-		add_to_group("Unoccupied_beds")
 
 func _ready():
 	$MeshInstance3D.mesh.material = $MeshInstance3D.mesh.material.duplicate()
