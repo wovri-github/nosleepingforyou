@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d24ij6ocm73vt"]
+[gd_scene load_steps=6 format=3 uid="uid://d24ij6ocm73vt"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_0syeh"]
+[ext_resource type="Script" path="res://sound_one.gd" id="2_d4xiq"]
+[ext_resource type="AudioStream" uid="uid://vp1moumtxdgb" path="res://Sounds/79113__kyster__cat-meow-01.wav" id="3_slc2v"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hnrjc"]
 
@@ -21,3 +23,9 @@ shape = SubResource("ConvexPolygonShape3D_24j11")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.445898, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
+
+[node name="audio" type="Node3D" parent="."]
+script = ExtResource("2_d4xiq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("3_slc2v")
