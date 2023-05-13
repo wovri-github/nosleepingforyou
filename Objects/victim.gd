@@ -17,7 +17,7 @@ func _ready():
 func wake_up():
 	$Guy/AnimationPlayer.stop()
 	$Guy/AnimationPlayer.clear_queue()
-	$Guy/AnimationPlayer.play_backwards("layDown")
+	$Guy/AnimationPlayer.play_backwards("waking_up")
 
 func move_on():
 	randomize()
@@ -41,13 +41,16 @@ func move_on():
 
 
 func _physics_process(_delta):
-	if $Guy/AnimationPlayer.current_animation == "sleep":
-		position = nav_agent.target_position + Vector3(-0.3,0,0)
-		position.y = -0.1
 	
 	if $Guy/AnimationPlayer.current_animation == "layDown":
-		position = nav_agent.target_position + Vector3(-0.65,0,0)
-		position.y = 0.1
+		position = bed.get_node("LayDownPosition").global_transform.origin
+	if $Guy/AnimationPlayer.current_animation == "sleep":
+		position = bed.get_node("SleepPosition").global_transform.origin
+		
+	if $Guy/AnimationPlayer.current_animation == "waking_up":
+		position = bed.get_node("LayDownPosition").global_transform.origin
+	if $Guy/AnimationPlayer.current_animation == "sitToStand":
+		position = bed.get_node("SitPosition").global_transform.origin
 		
 	if !nav_agent.is_target_reached():
 		var current_location = global_transform.origin
@@ -65,8 +68,12 @@ func set_target_location(target_location):
 
 
 func _on_animation_player_animation_changed(old_name, new_name):
+	if old_name == "standToSit" and new_name == "layDown":
+		#position = bed.get_node("LayDownPosition").global_transform.origin
+		pass
 	if old_name == "layDown" and new_name == "sleep":
 		bed.victim_sleep(self)
+		#position = bed.get_node("SleepPosition").global_transform.origin
 
 
 func _on_navigation_agent_3d_target_reached():
@@ -74,6 +81,10 @@ func _on_navigation_agent_3d_target_reached():
 		sleeping = true
 		$Guy/AnimationPlayer.stop()
 		$Guy/AnimationPlayer.clear_queue()
+		position = bed.get_node("SitPosition").global_transform.origin
+		#position = nav_agent.target_position + Vector3(-0.65,0,0)
+		#position.y = 0.1
+		$Guy/AnimationPlayer.queue("standToSit")
 		$Guy/AnimationPlayer.queue("layDown")
 		$Guy/AnimationPlayer.queue("sleep")
 		rotation.y = bed.rotation.y - PI / 2
@@ -85,6 +96,8 @@ func _on_navigation_agent_3d_target_reached():
 		target_place.victim_reached(self)
 
 func _on_animation_player_animation_finished(anim_name):
-	if anim_name == "layDown":
+	if anim_name == "waking_up":
+		$Guy/AnimationPlayer.play_backwards("sitToStand")
+	if anim_name == "sitToStand":
 		target_place.add_to_group("Unoccupied_beds")
 		move_on()

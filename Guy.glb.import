@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cecdc60k22f1y"
+uid="uid://thdud1f1g0fm"
 path="res://.godot/imported/Guy.glb-650d6b3850decdf0a34130e4c50bb836.scn"
 
 [deps]
@@ -28,11 +28,5 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Armature005/Skeleton3D": {
-"retarget/bone_map": Resource("res://Objects/Mixamo BoneMap.tres")
-}
-}
-}
+_subresources={}
 gltf/embedded_image_handling=1

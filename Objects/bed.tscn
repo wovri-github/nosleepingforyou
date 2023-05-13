@@ -31,7 +31,7 @@ normal_enabled = true
 normal_texture = ExtResource("4_6ggwn")
 
 [node name="Bed" type="StaticBody3D" groups=["Beds", "Unoccupied_beds"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61846, 0.5, 0)
 script = ExtResource("1_t46ld")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -60,6 +60,15 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.838
 material_override = SubResource("StandardMaterial3D_iimgb")
 mesh = ExtResource("3_ncmsa")
 surface_material_override/0 = SubResource("StandardMaterial3D_8d5ql")
+
+[node name="SitPosition" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23987, -0.284608, 0)
+
+[node name="LayDownPosition" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.677668, -0.453089, 0)
+
+[node name="SleepPosition" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.269712, -0.611898, -0.00144875)
 
 [connection signal="body_entered" from="Pillow" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Pillow" to="." method="_on_area_3d_body_exited"]

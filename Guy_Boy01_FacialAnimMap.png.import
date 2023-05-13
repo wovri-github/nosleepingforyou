@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctm44o7spncwp"
+uid="uid://dw25giqxjpet8"
 path.s3tc="res://.godot/imported/Guy_Boy01_FacialAnimMap.png-40febe3dcfbf4a1dd44092b6313105e1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
