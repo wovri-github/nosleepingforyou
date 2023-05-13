@@ -7,11 +7,13 @@ var target_place
 var prev_target_place
 var bed: Bed = null
 var rng = RandomNumberGenerator.new()
+@onready var detector = get_node("%Area3D")
 @onready var nav_agent := $NavigationAgent3D
 
 func _ready():
 	rng.randomize()
 	$Guy/AnimationPlayer.queue("Idle")
+	$Guy/AnimationPlayer.speed_scale = GameManager.victim_speed
 	move_on()
 
 
@@ -22,7 +24,6 @@ func wake_up():
 
 func move_on():
 	randomize()
-	sleeping = false
 	if randf() <= BED_CHANCE:
 		var beds = get_tree().get_nodes_in_group("Unoccupied_beds")
 		var target_bed = beds[rng.randi() % beds.size()]
@@ -38,6 +39,7 @@ func move_on():
 	$Guy/AnimationPlayer.stop()
 	$Guy/AnimationPlayer.clear_queue()
 	$Guy/AnimationPlayer.queue("walk")
+	detector.monitoring = true
 
 
 
@@ -59,7 +61,8 @@ func _physics_process(_delta):
 	if !nav_agent.is_target_reached():
 		var current_location = global_transform.origin
 		var next_location = nav_agent.get_next_path_position()
-		var new_velocity = (next_location - current_location).normalized() * SPEED
+		var new_velocity = (next_location - current_location).normalized()\
+				* SPEED * GameManager.victim_speed
 		new_velocity.y = 0
 		velocity = new_velocity
 		rotation.y = lerp_angle(rotation.y, Vector2(velocity.z, velocity.x).angle(), 0.1)
@@ -85,6 +88,7 @@ func _on_animation_player_animation_changed(old_name, new_name):
 
 func _on_navigation_agent_3d_target_reached():
 	if target_place is Bed:
+		detector.monitoring = false
 		sleeping = true
 		$Guy/AnimationPlayer.stop()
 		$Guy/AnimationPlayer.clear_queue()
@@ -120,15 +124,17 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func _on_area_3d_body_entered(body):
-	if body.is_in_group("Player") and !sleeping:
+	if body.is_in_group("Player"):
 		prev_target_place = target_place
 		$Guy/AnimationPlayer.stop()
 		$Guy/AnimationPlayer.play("walk")
 		target_place = body
 		set_target_location(body)
+		print("Entered: ", body)
 
 
 func _on_area_3d_body_exited(body):
-	if body.is_in_group("Player") and !sleeping:
+	if body.is_in_group("Player"):
 		target_place = prev_target_place
 		set_target_location(target_place)
+		print(body)
