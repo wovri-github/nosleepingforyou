@@ -21,7 +21,9 @@ const wake_up_texts = [
 const chase_texts = [
 	"Zaraz nucze cię latać!",
 	"Przerobię cię na mielone!",
-	"Ładny widok za oknem..."
+	"Ładny widok za oknem...",
+	"Choć tu gnoju!",
+	"Spadaj na drzewo prostować banany!"
 ]
 
 func _ready():

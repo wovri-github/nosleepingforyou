@@ -102,7 +102,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21863, 0, 2.86054)
 [node name="Place4" parent="NavigationRegion3D" instance=ExtResource("4_55d2r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.59541)
 
-[node name="Ziom" parent="." instance=ExtResource("5_vx32k")]
+[node name="Gonzalez" parent="." instance=ExtResource("5_vx32k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.598, 0, -5)
 
 [node name="Grzegorz" parent="." instance=ExtResource("5_vx32k")]
