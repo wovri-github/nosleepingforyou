@@ -70,6 +70,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.677668, -0.453089, 0)
 [node name="SleepPosition" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.269712, -0.611898, -0.00144875)
 
+[node name="SleepProgress" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00173712, 0.57793, 0.0168161)
+billboard = 2
+
+[node name="VictimName" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.806629, 0)
+billboard = 2
+
 [connection signal="body_entered" from="Pillow" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Pillow" to="." method="_on_area_3d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

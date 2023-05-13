@@ -22,6 +22,7 @@ func victim_sleep(body):
 	sleep_timer.emit(100)
 	$Timer.start(SLEEP_NEEDED)
 	sleeping_vicim_name.emit(body.name)
+	$VictimName.text = body.name
 	victim = body
 
 func _on_area_3d_body_entered(body):
@@ -35,6 +36,8 @@ func _on_area_3d_body_entered(body):
 			sleep_timer.emit(0)
 			$Timer.paused = true
 			sleeping_vicim_name.emit("")
+			$SleepProgress.text = ""
+			$VictimName.text = ""
 			victim.wake_up()
 			victim = null
 
@@ -59,7 +62,10 @@ func _ready():
 
 func _process(_delta):
 	if !$Timer.paused and someone_sleeping:
-		sleep_timer.emit(100*$Timer.time_left/SLEEP_NEEDED)
+		var sleep_pc = 100*$Timer.time_left/SLEEP_NEEDED
+		sleep_timer.emit(sleep_pc)
+		$SleepProgress.text = str(round(sleep_pc)) + "%"
+		
 
 func _on_timer_timeout():
 	var menu = preload("res://GUI/GameOver.tscn").instantiate()
