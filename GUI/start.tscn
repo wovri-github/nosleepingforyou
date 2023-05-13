@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnp58u7ir6wh8"]
+
+[ext_resource type="Texture2D" uid="uid://c504uvspbe0a8" path="res://assets/Screens/Screen-1.png" id="1_avtwm"]
+[ext_resource type="Script" path="res://GUI/start.gd" id="1_dqe6d"]
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchor_right = 0.336
+anchor_bottom = 0.85
+offset_right = 840.928
+offset_bottom = 208.2
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dqe6d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = ExtResource("1_avtwm")
+expand_mode = 2
