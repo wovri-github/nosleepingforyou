@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+const MAX_SPEED_DIVISION = 2
+var speed_multipier = min(GameManager.sleep_devider, MAX_SPEED_DIVISION)
+var speed = 5.0 / speed_multipier
 var bed = null
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -24,7 +26,8 @@ func _unhandled_input(event):
 
 func _physics_process(delta):
 	if position.y < -10:
-		add_child(preload("res://GUI/GameOver.tscn").instantiate())
+		GameManager.end_game(Over.OUT_OF_MAP, "Where are you?!")
+		
 		get_tree().paused = true
 	
 	# Add the gravity.
@@ -39,11 +42,11 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
 
 	move_and_slide()
 

@@ -62,10 +62,7 @@ func _process(_delta):
 		sleep_timer.emit(100*$Timer.time_left/sleep_needed)
 
 func _on_timer_timeout():
-	var menu = preload("res://GUI/GameOver.tscn").instantiate()
-	add_child(menu)
-	menu.find_child("Reason").text = victim.name + " got some rest!"
-	get_tree().paused = true
+	GameManager.end_game(Over.TIME_OUT, str(victim.name + " got some rest!"))
 	
 
 

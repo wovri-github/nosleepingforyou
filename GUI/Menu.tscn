@@ -99,7 +99,7 @@ offset_top = 524.0
 offset_right = 1102.0
 offset_bottom = 572.0
 max_value = 1.0
-step = 0.01
+step = 0.2
 
 [node name="Label" type="Label" parent="HSlider"]
 layout_mode = 0

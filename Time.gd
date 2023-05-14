@@ -21,7 +21,4 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	var menu = preload("res://GUI/GameOver.tscn").instantiate()
-	get_tree().root.get_node("Main").add_child(menu)
-	menu.find_child("Reason").text = "You win!"
-	get_tree().paused = true
+	GameManager.end_game(Over.WIN, "You win!")
