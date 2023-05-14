@@ -17,5 +17,5 @@ surface_material_override/0 = ExtResource("2_nsinc")
 surface_material_override/1 = ExtResource("2_nsinc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-9.97921e-09, 0, -0.228298, 0, 0.228298, 0, 0.228298, 0, -9.97921e-09, 0.000170231, 0, 0.000400543)
+transform = Transform3D(0.228298, 0, 0, 0, 0.228298, 0, 0, 0, 0.228298, 0.000170231, 0, 0.000400543)
 shape = SubResource("ConvexPolygonShape3D_y47ew")
