@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://dft8w5y3vq0um"]
+[gd_scene load_steps=71 format=3 uid="uid://dft8w5y3vq0um"]
 
 [ext_resource type="PackedScene" uid="uid://cntax283353xi" path="res://Objects/bed.tscn" id="1_hxjst"]
 [ext_resource type="PackedScene" path="res://Objects/window.tscn" id="2_70q5v"]
@@ -35,6 +35,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cs8nm2xofuf8" path="res://assets/models/furniture/Fur_2/kitchen_krzeslo.obj" id="33_hpe44"]
 [ext_resource type="PackedScene" uid="uid://dpwfttkot6xoo" path="res://Objects/victim.tscn" id="34_frfs0"]
 [ext_resource type="PackedScene" uid="uid://d24ij6ocm73vt" path="res://player.tscn" id="35_5tpp1"]
+[ext_resource type="PackedScene" uid="uid://b37jqy7fbxyta" path="res://Objects/place.tscn" id="36_ajf4h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r51yx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -491,7 +492,7 @@ shape = SubResource("ConcavePolygonShape3D_mh46v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63544, 0, -16.7624)
 
 [node name="Player" parent="." instance=ExtResource("35_5tpp1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40741, 8.03065, 1.42128)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40741, 0.798595, 1.42128)
 
 [node name="Fred" parent="." instance=ExtResource("34_frfs0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3719, 0, -9.05217)
@@ -508,3 +509,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.69941, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.82194, 0, -6.72386)
 shape = SubResource("BoxShape3D_b1toh")
+
+[node name="Places" type="Node" parent="."]
+
+[node name="Place" parent="Places" instance=ExtResource("36_ajf4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.614, 0, -8.64)
+
+[node name="Place2" parent="Places" instance=ExtResource("36_ajf4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.96107, 0, 0)
+
+[node name="Place3" parent="Places" instance=ExtResource("36_ajf4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.10078, 0, -10.9068)
+
+[node name="Place4" parent="Places" instance=ExtResource("36_ajf4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.40412, 0, -12.9055)
+
+[node name="Place5" parent="Places" instance=ExtResource("36_ajf4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27668, 0, -15.887)
