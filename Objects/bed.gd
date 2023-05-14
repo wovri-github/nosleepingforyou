@@ -2,7 +2,7 @@ extends StaticBody3D
 class_name Bed
 
 const sleep_bar_tscn = preload("res://sleep_bar.tscn")
-const SLEEP_NEEDED = 30
+var sleep_needed = 30 / (GameManager.sleep_devider)
 var someone_sleeping = false
 var victim : CharacterBody3D = null
 
@@ -20,7 +20,7 @@ func victim_sleep(body):
 	$Timer.paused = false
 	$Timer.stop()
 	sleep_timer.emit(100)
-	$Timer.start(SLEEP_NEEDED)
+	$Timer.start(sleep_needed)
 	sleeping_vicim_name.emit(body.name)
 	victim = body
 
@@ -46,7 +46,7 @@ func _on_area_3d_body_exited(body):
 		if someone_sleeping:
 			$Timer.paused = false
 			$Timer.stop()
-			$Timer.start(SLEEP_NEEDED)
+			$Timer.start(sleep_needed)
 
 func _ready():
 	$MeshInstance3D.mesh.material = $MeshInstance3D.mesh.material.duplicate()
@@ -59,7 +59,7 @@ func _ready():
 
 func _process(_delta):
 	if !$Timer.paused and someone_sleeping:
-		sleep_timer.emit(100*$Timer.time_left/SLEEP_NEEDED)
+		sleep_timer.emit(100*$Timer.time_left/sleep_needed)
 
 func _on_timer_timeout():
 	var menu = preload("res://GUI/GameOver.tscn").instantiate()
