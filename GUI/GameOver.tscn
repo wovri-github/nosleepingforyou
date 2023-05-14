@@ -127,9 +127,8 @@ text = "Następny Poziom:"
 [node name="Num" type="Label" parent="PlayAgain/NextLvl"]
 layout_mode = 0
 offset_left = 291.0
-offset_top = 5.0
 offset_right = 331.0
-offset_bottom = 50.0
+offset_bottom = 45.0
 
 [connection signal="pressed" from="GoMenu" to="." method="_on_go_menu_pressed"]
 [connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
