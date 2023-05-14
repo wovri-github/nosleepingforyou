@@ -62,7 +62,7 @@ func _process(_delta):
 		sleep_timer.emit(100*$Timer.time_left/sleep_needed)
 
 func _on_timer_timeout():
-	GameManager.end_game(Over.TIME_OUT, str(victim.name + " got some rest!"))
+	GameManager.end_game(Over.TIME_OUT, str(victim.name + " wypoczął!"))
 	
 
 

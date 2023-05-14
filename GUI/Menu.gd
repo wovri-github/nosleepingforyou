@@ -24,10 +24,6 @@ func _on_audio_stream_player_finished():
 	$AudioStreamPlayer.play()
 
 
-func _on_credits_toggled(button_pressed):
-	print(button_pressed)
-
-
 func _on_credits_mouse_entered():
 	pass # Replace with function body.
 

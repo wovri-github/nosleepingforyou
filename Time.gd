@@ -21,4 +21,4 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	GameManager.end_game(Over.WIN, "You win!")
+	GameManager.end_game(Over.WIN, "Przeszedłeś poziom!")

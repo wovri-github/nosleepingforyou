@@ -25,7 +25,6 @@ func _unhandled_input(event):
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(60))
 
 func _physics_process(delta):
-	print(speed)
 	if position.y < -10:
 		GameManager.end_game(Over.OUT_OF_MAP, "Where are you?!")
 		

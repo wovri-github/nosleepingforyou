@@ -130,7 +130,7 @@ func _on_navigation_agent_3d_target_reached():
 		$Guy/AnimationPlayer.queue("Idle")
 		target_place.victim_reached(self)
 	if target_place.is_in_group("Player"):
-		GameManager.end_game(Over.WIN, str(self.name + " catched you!"))
+		GameManager.end_game(Over.CATCH, str(self.name + " cię złapał!"))
 	
 
 func _on_animation_player_animation_finished(anim_name):
