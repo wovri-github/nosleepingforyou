@@ -1,6 +1,6 @@
 extends Label
 
-const NIGHT_TIME = 360
+const NIGHT_TIME = 120
 const N_OF_HOURS = 6
 
 func _ready():
