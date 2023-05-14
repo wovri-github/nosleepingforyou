@@ -3,7 +3,7 @@ extends Node
 const GAMEOVER = preload("res://GUI/GameOver.tscn")
 var wins = 0
 var result = 0
-var lvl = 1
+var lvl = 1.0
 var victim_speed = 1
 var sleep_devider = 1
 

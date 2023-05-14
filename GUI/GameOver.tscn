@@ -14,12 +14,12 @@ grow_vertical = 2
 theme = ExtResource("2_b1pet")
 script = ExtResource("1_pmmx7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 171.0
-offset_right = 253.0
-offset_bottom = 313.0
+offset_left = 8.0
+offset_top = 447.0
+offset_right = 1161.0
+offset_bottom = 626.0
 color = Color(0.35, 0.163333, 0, 1)
 
 [node name="Label" type="Label" parent="."]
@@ -75,10 +75,10 @@ vertical_alignment = 1
 [node name="Lvl" type="Label" parent="."]
 layout_mode = 0
 offset_left = 28.0
-offset_top = 185.0
+offset_top = 507.0
 offset_right = 143.0
-offset_bottom = 233.0
-text = "Poziom"
+offset_bottom = 555.0
+text = "Poziom: "
 
 [node name="Num" type="Label" parent="Lvl"]
 layout_mode = 0
@@ -88,10 +88,10 @@ offset_bottom = 45.0
 
 [node name="Wins" type="Label" parent="."]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 247.0
-offset_right = 176.0
-offset_bottom = 295.0
+offset_left = 28.0
+offset_top = 453.0
+offset_right = 173.0
+offset_bottom = 501.0
 text = "Wygrane:"
 
 [node name="Num" type="Label" parent="Wins"]
@@ -99,14 +99,6 @@ layout_mode = 0
 offset_left = 155.0
 offset_right = 195.0
 offset_bottom = 45.0
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 722.0
-offset_top = 300.0
-offset_right = 1139.0
-offset_bottom = 376.0
-color = Color(0.35, 0.163333, 0, 1)
 
 [node name="PlayAgain" type="Button" parent="."]
 layout_mode = 1
@@ -126,17 +118,18 @@ text = "Graj dalej"
 
 [node name="NextLvl" type="Label" parent="PlayAgain"]
 layout_mode = 0
-offset_left = 287.0
-offset_top = 4.0
-offset_right = 567.0
-offset_bottom = 52.0
+offset_left = -408.0
+offset_top = 254.0
+offset_right = -128.0
+offset_bottom = 302.0
 text = "Następny Poziom:"
 
 [node name="Num" type="Label" parent="PlayAgain/NextLvl"]
 layout_mode = 0
-offset_left = 293.0
-offset_right = 333.0
-offset_bottom = 45.0
+offset_left = 291.0
+offset_top = 5.0
+offset_right = 331.0
+offset_bottom = 50.0
 
 [connection signal="pressed" from="GoMenu" to="." method="_on_go_menu_pressed"]
 [connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]

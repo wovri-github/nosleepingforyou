@@ -7,16 +7,16 @@ var text = "NULL"
 @onready var reason_n = $Reason
 
 
-func setup(reason: int, lvl, wins):
+func setup(reason: int, lvl: float, wins):
 	if reason == Over.WIN:
 		$Label.hide()
 		$PlayAgain.show()
 	else:
 		$Label.show()
 		$PlayAgain.hide()
-	$Lvl/Num.set_text(str(lvl))
+	$Lvl/Num.set_text(LvlNames.get_lvl_name(lvl))
 	$Wins/Num.set_text(str(wins))
-	$PlayAgain/NextLvl/Num.set_text(str(lvl + game_lvl_increase))
+	$PlayAgain/NextLvl/Num.set_text(LvlNames.get_lvl_name(lvl + game_lvl_increase))
 	
 	pass
 
