@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://ks0ffxqlt6i"]
+
+[ext_resource type="Script" path="res://Time.gd" id="1_jr32r"]
+
+[node name="Time" type="Label"]
+anchors_preset = -1
+anchor_left = 0.942
+anchor_right = 1.0
+anchor_bottom = 0.035
+offset_left = -0.184082
+offset_bottom = 0.32
+theme_override_font_sizes/font_size = 25
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_jr32r")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
