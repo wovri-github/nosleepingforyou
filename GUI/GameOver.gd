@@ -28,6 +28,7 @@ func _ready():
 	reason_n.set_text(text)
 
 func _on_go_menu_pressed():
+	GameManager.reset()
 	get_tree().change_scene_to_file(MAIN_MENU)
 	self.hide()
 

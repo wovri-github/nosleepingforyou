@@ -26,3 +26,8 @@ func end_game(reason: int, text: String):
 	gameover_n.set_reason_text(text)
 	add_child(gameover_n)
 	get_tree().paused = true
+
+func reset():
+	lvl = 1.0
+	victim_speed = 1
+	sleep_devider = 1
