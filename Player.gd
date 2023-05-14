@@ -3,9 +3,9 @@ extends CharacterBody3D
 
 const JUMP_VELOCITY = 4.5
 const MAX_SPEED_DIVISION = 2
-var speed_multipier = min(GameManager.sleep_devider, MAX_SPEED_DIVISION)
-var speed = 5.0 / speed_multipier
 var bed = null
+@onready var speed_multipier = min(GameManager.sleep_devider, MAX_SPEED_DIVISION)
+@onready var speed = 5.0 / speed_multipier
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -25,6 +25,7 @@ func _unhandled_input(event):
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(60))
 
 func _physics_process(delta):
+	print(speed)
 	if position.y < -10:
 		GameManager.end_game(Over.OUT_OF_MAP, "Where are you?!")
 		
