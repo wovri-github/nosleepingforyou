@@ -55,7 +55,3 @@ Meow={
 [layer_names]
 
 3d_physics/layer_1="Player"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
