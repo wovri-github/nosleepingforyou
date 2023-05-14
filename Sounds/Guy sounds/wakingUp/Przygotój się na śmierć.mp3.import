@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0dd0kwxqpaac"
+path="res://.godot/imported/Przygotój się na śmierć.mp3-cd2292a7269b5e38a7d98c6059bca042.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Guy sounds/wakingUp/Przygotój się na śmierć.mp3"
+dest_files=["res://.godot/imported/Przygotój się na śmierć.mp3-cd2292a7269b5e38a7d98c6059bca042.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

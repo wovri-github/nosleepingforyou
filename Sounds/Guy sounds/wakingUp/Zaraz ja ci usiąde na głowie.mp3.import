@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cki4wvx7m08i5"
+path="res://.godot/imported/Zaraz ja ci usiąde na głowie.mp3-a4721e79ed40fba91d0d203ca0dc9813.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Guy sounds/wakingUp/Zaraz ja ci usiąde na głowie.mp3"
+dest_files=["res://.godot/imported/Zaraz ja ci usiąde na głowie.mp3-a4721e79ed40fba91d0d203ca0dc9813.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

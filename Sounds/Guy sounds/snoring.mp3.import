@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bumt4y2hmot6d"
+path="res://.godot/imported/snoring.mp3-c222480bcd33073c13e33b469a272127.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Guy sounds/snoring.mp3"
+dest_files=["res://.godot/imported/snoring.mp3-c222480bcd33073c13e33b469a272127.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
