@@ -165,7 +165,7 @@ data = PackedVector3Array(0.7605, 1.4117, 18.9731, 0.409, 1.3764, 18.9437, 0.760
 size = Vector3(20, 0.1, 35)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cqcfy"]
-size = Vector2(20, 35)
+size = Vector2(35, 35)
 
 [node name="Main" type="Node3D"]
 
@@ -518,14 +518,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.09681, 0, -6.13723)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86547, 0, -18.5333)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.69941, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148161, 2.91211, -6.39652)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.82194, 0, -6.72386)
 shape = SubResource("BoxShape3D_b1toh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -3.77583, -6.807)
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
 mesh = SubResource("PlaneMesh_cqcfy")
 
 [node name="Places" type="Node" parent="."]
