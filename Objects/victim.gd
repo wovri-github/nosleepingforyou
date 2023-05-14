@@ -27,7 +27,7 @@ const chase_texts = [
 ]
 
 func _ready():
-	var red = 1 + pow((GameManager.lvl - 1),3) * 10 
+	var red = 1 + min(pow((GameManager.lvl - 1),3) * 10,10) 
 	%Boy01_Eyes_Geo.get_active_material(0).albedo_color = Color(red, 1.0, 1.0, 1.0)
 	$NameLabel.text = name
 	
