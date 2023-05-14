@@ -49,6 +49,12 @@ sky_material = SubResource("ProceduralSkyMaterial_r51yx")
 background_mode = 2
 sky = SubResource("Sky_0vyp4")
 tonemap_mode = 2
+glow_levels/1 = 8.8
+glow_levels/2 = 5.5
+glow_levels/3 = 5.3
+glow_levels/4 = 4.3
+glow_levels/5 = 1.47
+glow_blend_mode = 0
 fog_enabled = true
 fog_density = 0.1088
 

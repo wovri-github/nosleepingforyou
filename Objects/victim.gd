@@ -27,6 +27,8 @@ const chase_texts = [
 ]
 
 func _ready():
+	%Boy01_Eyes_Geo.get_active_material(0).albedo_color = Color(5.0, 1.0, 1.0, 1.0)
+	
 	rng.randomize()
 	$Guy/AnimationPlayer.queue("Idle")
 	$Guy/AnimationPlayer.speed_scale = GameManager.victim_speed
@@ -159,6 +161,5 @@ func _on_area_3d_body_exited(body):
 			await wait_to_exit_body.timeout
 		target_place = prev_target_place
 		set_target_location(target_place)
-		print("Exit: ", body)
 		$Label3D.text = ""
 	
