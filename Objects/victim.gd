@@ -155,9 +155,10 @@ func _on_area_3d_body_entered(body):
 
 func _on_area_3d_body_exited(body):
 	if body.is_in_group("Player"):
-		await wait_to_exit_body.timeout
+		if wait_to_exit_body.time_left != 0:
+			await wait_to_exit_body.timeout
 		target_place = prev_target_place
 		set_target_location(target_place)
-		print(body)
+		print("Exit: ", body)
 		$Label3D.text = ""
 	
