@@ -16,6 +16,5 @@ func _ready():
 	$AnimatedSprite2D.play("default")
 	%Label.set_text(LvlNames.get_lvl_name(%HSlider.get_value() + 1))
 
-
-func _on_h_slider_drag_ended(value_changed):
+func _on_h_slider_value_changed(_value):
 	%Label.set_text(LvlNames.get_lvl_name(%HSlider.get_value() + 1))

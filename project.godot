@@ -24,6 +24,10 @@ GameManager="*res://GameManager.gd"
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 
+[dotnet]
+
+project/assembly_name="NoSleeping"
+
 [input]
 
 forward={
