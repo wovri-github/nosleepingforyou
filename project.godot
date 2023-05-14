@@ -55,3 +55,8 @@ Meow={
 [layer_names]
 
 3d_physics/layer_1="Player"
+
+[navigation]
+
+3d/default_cell_size=0.1
+3d/default_edge_connection_margin=0.1
