@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c5mpo36vu0v1h"
+path="res://.godot/imported/Przerobię cię na mie.wav-af6171a7ce9c18efbad124d90b3587b3.sample"
+
+[deps]
+
+source_file="res://Sounds/Guy sounds/Gonienie/Przerobię cię na mie.wav"
+dest_files=["res://.godot/imported/Przerobię cię na mie.wav-af6171a7ce9c18efbad124d90b3587b3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

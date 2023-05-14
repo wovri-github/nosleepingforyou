@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bp2dea2d0rh06"
+path="res://.godot/imported/Jak cię dorwę .wav-09e03c51042a738d97d9ae6ddd439912.sample"
+
+[deps]
+
+source_file="res://Sounds/Guy sounds/wakingUp/Jak cię dorwę .wav"
+dest_files=["res://.godot/imported/Jak cię dorwę .wav-09e03c51042a738d97d9ae6ddd439912.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
