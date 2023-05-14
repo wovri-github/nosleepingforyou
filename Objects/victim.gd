@@ -27,7 +27,8 @@ const chase_texts = [
 ]
 
 func _ready():
-	%Boy01_Eyes_Geo.get_active_material(0).albedo_color = Color(5.0, 1.0, 1.0, 1.0)
+	var red = 1 + pow((GameManager.lvl - 1),3) * 10 
+	%Boy01_Eyes_Geo.get_active_material(0).albedo_color = Color(red, 1.0, 1.0, 1.0)
 	
 	rng.randomize()
 	$Guy/AnimationPlayer.queue("Idle")
