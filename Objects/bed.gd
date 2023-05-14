@@ -2,7 +2,7 @@ extends StaticBody3D
 class_name Bed
 
 const sleep_bar_tscn = preload("res://sleep_bar.tscn")
-var sleep_needed = 30 / (GameManager.sleep_devider)
+var sleep_needed = 30.0 / (GameManager.sleep_devider)
 var someone_sleeping = false
 var victim : CharacterBody3D = null
 
