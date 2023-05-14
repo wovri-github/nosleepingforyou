@@ -1,9 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2nrhktg8cixq"]
 
 [ext_resource type="ArrayMesh" uid="uid://ds15fihcs2lsg" path="res://assets/models/furniture/Fur_2/doors_around.obj" id="1_vvtp2"]
-[ext_resource type="Material" path="res://furn.tres" id="2_b258h"]
+[ext_resource type="Material" uid="uid://b3b07qfvkn5iq" path="res://furn.tres" id="2_b258h"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_4if5n"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_of82d"]
+size = Vector3(0.284633, 3.02331, 0.316418)
 
 [node name="DoorsAround" type="StaticBody3D"]
 
@@ -14,5 +15,9 @@ skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("2_b258h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 2.60388, 0)
-shape = SubResource("BoxShape3D_4if5n")
+transform = Transform3D(0.709128, 0, 0.70508, 0, 1, 0, -0.70508, 0, 0.709128, -0.104982, 1.36799, -0.0297834)
+shape = SubResource("BoxShape3D_of82d")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.709128, 0, 0.70508, 0, 1, 0, -0.70508, 0, 0.709128, -0.104982, 1.36799, 1.52477)
+shape = SubResource("BoxShape3D_of82d")
