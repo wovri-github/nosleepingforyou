@@ -111,6 +111,7 @@ scale = Vector2(1, 0.984903)
 text = "Prosty"
 
 [node name="Label2" type="Label" parent="HSlider"]
+layout_mode = 0
 offset_left = 173.0
 offset_top = -41.0
 offset_right = 282.0
