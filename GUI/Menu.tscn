@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bor178du6hymf"]
+[gd_scene load_steps=13 format=3 uid="uid://bor178du6hymf"]
 
 [ext_resource type="Theme" uid="uid://cm0ayacm4lssn" path="res://GUI/GUI.tres" id="1_74264"]
 [ext_resource type="Script" path="res://GUI/Menu.gd" id="1_an676"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c01bkq4u66f3a" path="res://mainmenu/catanim/sprite_3.png" id="7_8pjot"]
 [ext_resource type="Texture2D" uid="uid://05m4kqikhlvg" path="res://mainmenu/catanim/sprite_4.png" id="8_ftcvr"]
 [ext_resource type="Texture2D" uid="uid://bwnw4vpi5qup1" path="res://mainmenu/catanim/sprite_5.png" id="9_fayau"]
+[ext_resource type="AudioStream" uid="uid://0sif0er0mur7" path="res://Sounds/Main menu music.wav" id="10_v2se4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r7d4m"]
 animations = [{
@@ -128,6 +129,11 @@ size_flags_horizontal = 4
 max_value = 1.0
 step = 0.2
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_v2se4")
+autoplay = true
+
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="value_changed" from="PanelContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
