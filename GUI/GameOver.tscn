@@ -101,6 +101,7 @@ offset_right = 195.0
 offset_bottom = 45.0
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 722.0
 offset_top = 300.0
 offset_right = 1139.0
