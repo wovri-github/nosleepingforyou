@@ -22,7 +22,7 @@ const chase_texts = [
 	"Zaraz nucze cię latać!",
 	"Przerobię cię na mielone!",
 	"Ładny widok za oknem...",
-	"Choć tu gnoju!",
+	"Chodź tu gnoju!",
 	"Spadaj na drzewo prostować banany!"
 ]
 
