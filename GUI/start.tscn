@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnp58u7ir6wh8"]
+[gd_scene load_steps=7 format=3 uid="uid://dnp58u7ir6wh8"]
 
 [ext_resource type="Texture2D" uid="uid://c504uvspbe0a8" path="res://assets/Screens/Screen-1.png" id="1_avtwm"]
 [ext_resource type="Script" path="res://GUI/start.gd" id="1_dqe6d"]
 [ext_resource type="AudioStream" uid="uid://b45fyc0wvh227" path="res://Sounds/ComicSounds/1-O kurwa ale jstem zm.wav" id="3_aswp1"]
 [ext_resource type="AudioStream" uid="uid://r0p6uwxrejat" path="res://Sounds/ComicSounds/2-która godzina Już pó.wav" id="4_nw54c"]
 [ext_resource type="AudioStream" uid="uid://crk3odr3n1jk3" path="res://Sounds/ComicSounds/3-Ja pierdole Idę spać.wav" id="5_36uhx"]
+[ext_resource type="AudioStream" uid="uid://vp1moumtxdgb" path="res://Sounds/79113__kyster__cat-meow-01.wav" id="6_uwf80"]
 
 [node name="Start" type="Control"]
 layout_mode = 3
@@ -32,6 +33,11 @@ stream = ExtResource("4_nw54c")
 [node name="c" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_36uhx")
 
+[node name="Meow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_uwf80")
+volume_db = 15.782
+
 [connection signal="finished" from="a" to="." method="_on_1_finished"]
 [connection signal="finished" from="b" to="." method="_on_2_finished"]
 [connection signal="finished" from="c" to="." method="_on_3_finished"]
+[connection signal="finished" from="Meow" to="." method="_on_meow_finished"]

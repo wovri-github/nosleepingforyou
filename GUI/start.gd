@@ -25,3 +25,8 @@ func _on_2_finished():
 
 func _on_3_finished():
 	$TextureRect.texture = screen_2
+	$Meow.play()
+
+
+func _on_meow_finished():
+	get_tree().change_scene_to_file("uid://bor178du6hymf")
