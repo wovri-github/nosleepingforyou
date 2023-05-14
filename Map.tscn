@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://dft8w5y3vq0um"]
+[gd_scene load_steps=74 format=3 uid="uid://dft8w5y3vq0um"]
 
 [ext_resource type="PackedScene" uid="uid://cntax283353xi" path="res://Objects/bed.tscn" id="1_hxjst"]
 [ext_resource type="PackedScene" uid="uid://daetm5gwkaykj" path="res://Objects/window.tscn" id="2_70q5v"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://d24ij6ocm73vt" path="res://player.tscn" id="35_5tpp1"]
 [ext_resource type="PackedScene" uid="uid://b37jqy7fbxyta" path="res://Objects/place.tscn" id="36_ajf4h"]
 [ext_resource type="PackedScene" uid="uid://ks0ffxqlt6i" path="res://gameTime.tscn" id="37_eolgv"]
+[ext_resource type="AudioStream" uid="uid://bhmp1rqyftjd7" path="res://Sounds/Ambient.wav" id="38_53x02"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r51yx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -545,3 +546,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.40412, 0, -12.9055)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27668, 0, -15.887)
 
 [node name="Time" parent="." instance=ExtResource("37_eolgv")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("38_53x02")
+autoplay = true

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/snoring.mp3-c222480bcd33073c13e33b469a272127.
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
