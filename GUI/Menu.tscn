@@ -72,6 +72,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 
+[node name="Credits" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 264.0
+offset_top = -28.0
+offset_right = 529.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "
+"
+
 [node name="Button2" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -134,6 +151,7 @@ stream = ExtResource("10_v2se4")
 autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="Credits" to="." method="_on_credits_toggled"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="value_changed" from="PanelContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
