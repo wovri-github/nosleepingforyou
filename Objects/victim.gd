@@ -125,10 +125,7 @@ func _on_navigation_agent_3d_target_reached():
 		$Guy/AnimationPlayer.queue("Idle")
 		target_place.victim_reached(self)
 	if target_place.is_in_group("Player"):
-		var menu = preload("res://GUI/GameOver.tscn").instantiate()
-		add_child(menu)
-		menu.find_child("Reason").text = self.name + " catched you!"
-		get_tree().paused = true
+		GameManager.end_game(Over.WIN, str(self.name + " catched you!"))
 	
 
 func _on_animation_player_animation_finished(anim_name):

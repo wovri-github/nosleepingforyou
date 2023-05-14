@@ -24,7 +24,8 @@ func _unhandled_input(event):
 
 func _physics_process(delta):
 	if position.y < -10:
-		add_child(preload("res://GUI/GameOver.tscn").instantiate())
+		GameManager.end_game(Over.OUT_OF_MAP, "Where are you?!")
+		
 		get_tree().paused = true
 	
 	# Add the gravity.
