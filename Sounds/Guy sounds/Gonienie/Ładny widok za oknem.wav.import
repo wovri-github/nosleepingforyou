@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c14isxbo41v27"
+path="res://.godot/imported/Ładny widok za oknem.wav-84a232eb65c899d5303bfef2c5e4290d.sample"
+
+[deps]
+
+source_file="res://Sounds/Guy sounds/Gonienie/Ładny widok za oknem.wav"
+dest_files=["res://.godot/imported/Ładny widok za oknem.wav-84a232eb65c899d5303bfef2c5e4290d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
