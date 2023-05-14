@@ -1,5 +1,5 @@
 extends Control
-const game = preload("res://test.tscn")
+const game = preload("res://Map.tscn")
 @onready var dificulty_slider = $HSlider
 
 func _on_button_pressed():
