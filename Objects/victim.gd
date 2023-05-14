@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const SPEED = 1.8
-const BED_CHANCE = 1
+const BED_CHANCE = 0.5
 var sleeping = false
 var target_place
 var prev_target_place
